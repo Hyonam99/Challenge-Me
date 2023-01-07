@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import '../../Stylesheets/Auth-styles/Auth.css'
 
-import Logo from '../../Assets/Icons/challengeMe-white.svg'
+import Logo from '../../Components/Utility-components/Logo'
 import RegisterFormComponent from './RegisterFormComponent'
 
 const Register = () => {
@@ -10,9 +9,7 @@ const Register = () => {
     <>
       <section className="auth-form-container">
       <div className="register-image-section">
-        <div className="logo">
-          <img src={Logo} alt="Challengeme-Logo" />
-        </div>
+        <Logo />
         <div className="link-text">
           <p>www.challengeme.ng</p>
         </div>

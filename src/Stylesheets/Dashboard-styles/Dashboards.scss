@@ -1,10 +1,50 @@
 // $font-stack: Helvetica, sans-serif;
-$primary-color: #39cdcc;
+$primary-color: #1DA1F2;
+$secondary-color: #01081E;
+$tertiary-color: #151C31;
 $primary-text-color: #213f7d;
 $orange-color: orange;
 $alert-color: red;
 $success-color: green;
 
-h1{
-  color: $primary-text-color
+.main-dashboard{
+  display:grid;
+  grid-template-columns: 18% 1fr;
 }
+
+.dasboard-content-display{
+  padding:1rem 2rem;
+  background-color: $tertiary-color;
+}
+
+//? USERDASHBOARD STYLING SECTION
+
+
+.userdashboard-landing-page-container{
+  color: white;
+  .userdashboard-welcome-title-holder{
+    padding: 1rem 0rem;
+  }
+
+  .userdashboard-resume-journey-section {
+    width:50%;
+    padding:0.4rem;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:0.8rem;
+    align-items: center;
+
+    .resume-journey-image-holder{
+      // height:180px;
+      border:none;
+      border-radius: 6px;
+
+      img{
+        width:100%;
+        height:100%;
+      }
+    }
+  }
+}
+
+

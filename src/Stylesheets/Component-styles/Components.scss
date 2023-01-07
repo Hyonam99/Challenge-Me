@@ -1,0 +1,133 @@
+// $font-stack: Helvetica, sans-serif;
+$primary-color: #1DA1F2;
+$secondary-color: #01081E;
+$tertiary-color: #151C31;
+$primary-text-color: #213f7d;
+$orange-color: orange;
+$alert-color: red;
+$success-color: green;
+
+.logo{
+  width:100px;
+  height:100px;
+  padding:0.8rem;
+  img{
+    width:100%;
+  }
+}
+
+//? STYLING FOR THE BUTTONS
+
+.custom-button{
+  background-color: $primary-color;
+  padding: 16px 16px;
+  color: white;
+  border:none;
+  border-radius: 6px;
+  cursor:pointer;
+}
+
+.medium-button{
+  padding: 0px;
+  background-color: $primary-color;
+  color: white;
+  border:none;
+  border-radius: 6px;
+  cursor:pointer;
+  width:200px;
+  height:32px;
+}
+
+.short-button{
+  padding: 0px;
+  background-color: $primary-color;
+  color: white;
+  border:none;
+  border-radius: 6px;
+  cursor:pointer;
+  width:100px;
+  height:32px;
+}
+
+
+
+//? STYLING FOR THE SIDEBAR
+
+.main-sidebar-container{
+  background-color: $secondary-color;
+  min-height:100vh;
+
+  .sidebar-logo-holder{margin:0 25% 40% 25%;}
+
+  .sidebar-contents{
+    color:white;
+
+    .sidebar-navigation{
+      display:flex;
+      flex-direction: column;
+      gap:2rem;
+      
+      
+      li {
+        list-style-type: none;
+        padding:0.4rem;
+        a{
+          color:white;
+          &:active{color:$primary-color}
+        }
+        
+        &:hover{
+          
+          a{
+            color:$primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//? STYLING FOR THE NAVIGATION BAR
+
+.main-navigation-container{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $tertiary-color;
+  color:white;
+  padding:0.4rem 2rem;
+  border-bottom: 1px solid #3e4456;
+
+  .current-section-title{color:white;}
+
+  .navigation-section{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:72%;
+
+    li{list-style-type: none; font-size: 11px; text-transform:uppercase;}
+    .challenge, .balance{
+      display:flex;
+      flex-direction: column;
+      color:$primary-color;
+      span{color:white; font-size: 16px; text-transform: capitalize;}
+    }
+
+    .profile-holder{display:flex; align-items: center; gap:0.8rem; text-transform: capitalize; font-size: 16px;}
+    .profile-image{
+      width:48px;
+      height:48px;
+      border-radius: 50%;
+      border:none;
+      outline:2px solid $primary-color;
+
+      img{
+        width:100%;
+        height:100%;
+        border-radius: 50%;
+      }
+    }
+  }
+}

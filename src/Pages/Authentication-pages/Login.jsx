@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import '../../Stylesheets/Auth-styles/Auth.css'
 
 import Logo from '../../Assets/Icons/challengeMe-white.svg'
-import LoginFormComponent from './LoginFormComponent'
+import LoginFormComponent from '../../Components/Pages-components/LoginFormComponent'
 
 const Login = () => {
   return (

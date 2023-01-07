@@ -4,7 +4,8 @@ import { useFormik } from "formik";
 import * as Yup from 'yup';
 import Swal from 'sweetalert2'
 
-import Button from '../../Components/Button';
+import Button from '../../Components/Utility-components/Button';
+import Sicon from '../../Assets/Icons/circle-check-full.svg'
 
 const RegisterFormComponent = () => {
 
@@ -16,25 +17,39 @@ const RegisterFormComponent = () => {
   const navigate = useNavigate()
   const formik = useFormik({
   
-    initialValues: { email: "", password: "", confirmPassword: "" },
+    initialValues: { firstName: '', lastName: '', email: "", phoneNumber: '', password: "", confirmPassword: "" },
     
     validationSchema: Yup.object({
+      firstName: Yup.string().min(2, 'Must be at least 2 characters or more').required('Required'),
+      lastName: Yup.string().min(2, 'Must be at least 2 characters or more').required('Required'),
       email: Yup.string().email('Invalid email address').required('Required'),
-
+      phoneNumber: Yup.string().matches(/^[0]+[7-9]+[0-1]+[0-9]{8}$/, 'Phone number is not valid'),
       password: Yup.string()
-  .required('No password provided.') 
-  .matches(/^(?=(.*[a-z]))(?=(.*[A-Z]))(?=(.*[0-9]))(?=(.*[!@#$%^&*()\-__+.]){1,}).{8,24}$/, 'Password should contain minimum of 8 Alphanumeric characters and a symbol (~!@#$%^&*()+=).')
+      .required('No password provided.') 
+      .matches(/^(?=(.*[a-z]))(?=(.*[A-Z]))(?=(.*[0-9]))(?=(.*[!@#$%^&*()\-__+.]){1,}).{8,24}$/, 'Password should contain minimum of 8 Alphanumeric characters and a symbol (~!@#$%^&*()+=).'),
+      confirmPassword: Yup.string().required('Please retype your password.')
+      .oneOf([Yup.ref('password')], 'Your passwords do not match.')
        
     }),
 
     onSubmit: (values) => {
       if(values){
         Swal.fire({
-          icon: 'success',
+          iconHtml: `<img src=${Sicon}>`,
+          customClass: {icon: 'no-border'},
           title: 'Account Created',
-          text: 'Yon can proceed to explore challenges and earn !',
+          text: 'You can proceed to explore challenges and earn !',
+          confirmButtonText: 'Start Challenge',
+          // html:
+          //       'You can use <b>bold text</b>, ' +
+          //       '<a href="//sweetalert2.github.io">Start Challenge</a> ' +
+          //       'and other HTML tags',
+        }).then((result) => {
+          if(result.isConfirmed){
+            navigate('/dashboard')
+          }
         })
-      navigate('/landing-page')
+      
       }
     },
   });
@@ -50,31 +65,31 @@ const RegisterFormComponent = () => {
           <form onSubmit={formik.handleSubmit}>
 
             <div className="form-input-holder" >
-              <label htmlFor="email">First Name</label>
+              <label htmlFor="firstName">First Name</label>
                 <input
-                  id="email"
-                  className="email-address-input"
-                  name="email"
-                  type="email"
+                  id="firstName"
+                  className="firstName-input"
+                  name="firstName"
+                  type="text"
                   placeholder="First Name"
                   onChange={formik.handleChange}
-                  value={formik.values.email}
+                  value={formik.values.firstName}
                 />
-              {formik.errors.email ? <small>{formik.errors.email}</small> : null}
+              {formik.errors.firstName ? <small>{formik.errors.firstName}</small> : null}
             </div>
 
             <div className="form-input-holder" >
-              <label htmlFor="email">Last Name</label>
+              <label htmlFor="lastName">Last Name</label>
                 <input
-                  id="email"
-                  className="email-address-input"
-                  name="email"
-                  type="email"
+                  id="lastName"
+                  className="lastName-input"
+                  name="lastName"
+                  type="text"
                   placeholder="Last Name"
                   onChange={formik.handleChange}
-                  value={formik.values.email}
+                  value={formik.values.lastName}
                 />
-              {formik.errors.email ? <small>{formik.errors.email}</small> : null}
+              {formik.errors.lastName ? <small>{formik.errors.lastName}</small> : null}
             </div>
 
             <div className="form-input-holder" >
@@ -92,17 +107,17 @@ const RegisterFormComponent = () => {
             </div>
 
             <div className="form-input-holder" >
-              <label htmlFor="email">Phone Number</label>
+              <label htmlFor="phoneNumber">Phone Number</label>
                 <input
-                  id="email"
-                  className="email-address-input"
-                  name="email"
-                  type="email"
+                  id="phoneNumber"
+                  className="phoneNumber-input"
+                  name="phoneNumber"
+                  type="text"
                   placeholder="Phone Number"
                   onChange={formik.handleChange}
-                  value={formik.values.email}
+                  value={formik.values.phoneNumber}
                 />
-              {formik.errors.email ? <small>{formik.errors.email}</small> : null}
+              {formik.errors.phoneNumber ? <small>{formik.errors.phoneNumber}</small> : null}
             </div>
 
             <div className="form-input-holder">
@@ -130,7 +145,7 @@ const RegisterFormComponent = () => {
               <label htmlFor="confirmPassword">Confirm Password</label>
                 <input
                   id="confirmPassword"
-                  className="password-input"
+                  className="confirmPassword-input"
                   name="confirmPassword"
                   type={hideConfirmPassword ? 'password' : 'text'}
                   placeholder="Confirm Password"
@@ -142,7 +157,7 @@ const RegisterFormComponent = () => {
                   <Link onClick={() => {setHideConfirmPassword(true); setshowCText(true)}}>Hide</Link> }
                 </span>
                 
-              {formik.errors.password ? <small>{formik.errors.password}</small> : null}
+              {formik.errors.confirmPassword ? <small>{formik.errors.confirmPassword}</small> : null}
             </div>
 
             <Button title='REGISTER'/>

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useFormik } from "formik";
 import * as Yup from 'yup';
-import Button from '../../Components/Button';
+import Button from '../Utility-components/Button';
 
 const LoginFormComponent = () => {
   const [hidePassword, setHidePassword] = useState(true)
@@ -17,13 +17,15 @@ const LoginFormComponent = () => {
       email: Yup.string().email('Invalid email address').required('Required'),
 
       password: Yup.string()
-  .required('No password provided.') 
-  .matches(/^(?=(.*[a-z]))(?=(.*[A-Z]))(?=(.*[0-9]))(?=(.*[!@#$%^&*()\-__+.]){1,}).{8,24}$/, 'Password should contain minimum of 8 Alphanumeric characters and a symbol (~!@#$%^&*()+=).')
+      .required('No password provided.') 
+      .matches(/^(?=(.*[a-z]))(?=(.*[A-Z]))(?=(.*[0-9]))(?=(.*[!@#$%^&*()\-__+.]){1,}).{8,24}$/, 'Password should contain minimum of 8 Alphanumeric characters and a symbol (~!@#$%^&*()+=).')
        
     }),
 
     onSubmit: (values) => {
-      navigate('/landing-page')
+      if(values){
+      navigate('/dashboard')
+      }
     },
   });
 

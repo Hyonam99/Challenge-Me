@@ -1,8 +1,9 @@
 import React from 'react'
+import '../../Stylesheets/Component-styles/Components.css'
 
 const Button = ({long, medium, short, inactiveBtn, title}) => {
   return (
-    <button className={long ? 'long-button' : short ? 'short-button' : inactiveBtn ? 'inactive-button' : 'custom-button'} type="submit">{title}</button>
+    <button className={long ? 'long-button' : medium ? 'medium-button' : short ? 'short-button' : inactiveBtn ? 'inactive-button' : 'custom-button'} type="submit">{title}</button>
   )
 }
 

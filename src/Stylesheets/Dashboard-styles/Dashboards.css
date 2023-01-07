@@ -1,3 +1,32 @@
-h1 {
-  color: #213f7d;
+.main-dashboard {
+  display: grid;
+  grid-template-columns: 18% 1fr;
+}
+
+.dasboard-content-display {
+  padding: 1rem 2rem;
+  background-color: #151C31;
+}
+
+.userdashboard-landing-page-container {
+  color: white;
+}
+.userdashboard-landing-page-container .userdashboard-welcome-title-holder {
+  padding: 1rem 0rem;
+}
+.userdashboard-landing-page-container .userdashboard-resume-journey-section {
+  width: 50%;
+  padding: 0.4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  align-items: center;
+}
+.userdashboard-landing-page-container .userdashboard-resume-journey-section .resume-journey-image-holder {
+  border: none;
+  border-radius: 6px;
+}
+.userdashboard-landing-page-container .userdashboard-resume-journey-section .resume-journey-image-holder img {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=Dashboards.css.map */

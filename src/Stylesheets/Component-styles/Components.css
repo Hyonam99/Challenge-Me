@@ -1,0 +1,121 @@
+.logo {
+  width: 100px;
+  height: 100px;
+  padding: 0.8rem;
+}
+.logo img {
+  width: 100%;
+}
+
+.custom-button {
+  background-color: #1DA1F2;
+  padding: 16px 16px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.medium-button {
+  padding: 0px;
+  background-color: #1DA1F2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 200px;
+  height: 32px;
+}
+
+.short-button {
+  padding: 0px;
+  background-color: #1DA1F2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100px;
+  height: 32px;
+}
+
+.main-sidebar-container {
+  background-color: #01081E;
+  min-height: 100vh;
+}
+.main-sidebar-container .sidebar-logo-holder {
+  margin: 0 25% 40% 25%;
+}
+.main-sidebar-container .sidebar-contents {
+  color: white;
+}
+.main-sidebar-container .sidebar-contents .sidebar-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.main-sidebar-container .sidebar-contents .sidebar-navigation li {
+  list-style-type: none;
+  padding: 0.4rem;
+}
+.main-sidebar-container .sidebar-contents .sidebar-navigation li a {
+  color: white;
+}
+.main-sidebar-container .sidebar-contents .sidebar-navigation li a:active {
+  color: #1DA1F2;
+}
+.main-sidebar-container .sidebar-contents .sidebar-navigation li:hover a {
+  color: #1DA1F2;
+}
+
+.main-navigation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #151C31;
+  color: white;
+  padding: 0.4rem 2rem;
+  border-bottom: 1px solid #3e4456;
+}
+.main-navigation-container .current-section-title {
+  color: white;
+}
+.main-navigation-container .navigation-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 72%;
+}
+.main-navigation-container .navigation-section li {
+  list-style-type: none;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.main-navigation-container .navigation-section .challenge, .main-navigation-container .navigation-section .balance {
+  display: flex;
+  flex-direction: column;
+  color: #1DA1F2;
+}
+.main-navigation-container .navigation-section .challenge span, .main-navigation-container .navigation-section .balance span {
+  color: white;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.main-navigation-container .navigation-section .profile-holder {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+.main-navigation-container .navigation-section .profile-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  outline: 2px solid #1DA1F2;
+}
+.main-navigation-container .navigation-section .profile-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}/*# sourceMappingURL=Components.css.map */
