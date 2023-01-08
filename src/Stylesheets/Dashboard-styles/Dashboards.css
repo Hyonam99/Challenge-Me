@@ -6,6 +6,7 @@
 .dasboard-content-display {
   padding: 1rem 2rem;
   background-color: #151C31;
+  min-height: 100vh;
 }
 
 .userdashboard-landing-page-container {
@@ -21,12 +22,148 @@
   grid-template-columns: 1fr 1fr;
   gap: 0.8rem;
   align-items: center;
+  margin-bottom: 2%;
 }
 .userdashboard-landing-page-container .userdashboard-resume-journey-section .resume-journey-image-holder {
   border: none;
   border-radius: 6px;
 }
 .userdashboard-landing-page-container .userdashboard-resume-journey-section .resume-journey-image-holder img {
+  width: 100%;
+  height: 100%;
+}
+.userdashboard-landing-page-container .userdashboard-resume-journey-section .resume-journey-contents .status {
+  color: #00BE13;
+  font-size: 14px;
+}
+.userdashboard-landing-page-container .userdashboard-wallet-summary-section {
+  position: relative;
+  background-color: #01081E;
+  padding: 0.4rem;
+  border: none;
+  border-radius: 6px;
+  height: 350px;
+}
+.userdashboard-landing-page-container .userdashboard-wallet-summary-section::after {
+  position: absolute;
+  content: "";
+  padding: 2rem;
+  height: 50px;
+  background: linear-gradient(178.18deg, #1DA1F2 -13.56%, #281AC8 158.3%);
+  width: 93%;
+  bottom: 1px;
+  overflow: hidden;
+  border-radius: 50%/120px 6px 0 0;
+  opacity: 0.14;
+}
+.userdashboard-landing-page-container .userdashboard-wallet-summary-section::before {
+  position: absolute;
+  content: "";
+  background-image: url(../../Assets/Icons/star.svg);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  bottom: 60%;
+  left: 4%;
+}
+.userdashboard-landing-page-container .userdashboard-wallet-summary-section .wallet-options {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 1rem 2rem;
+}
+.userdashboard-landing-page-container .userdashboard-wallet-summary-section .wallet-options::before {
+  position: absolute;
+  content: "";
+  background-image: url(../../Assets/Icons/white-star.svg);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  top: 36%;
+  left: 60%;
+}
+.userdashboard-landing-page-container .userdashboard-wallet-summary-section .wallet-content-display {
+  position: relative;
+  padding: 1rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  z-index: 10;
+}
+.userdashboard-landing-page-container .userdashboard-wallet-summary-section .wallet-content-display::after {
+  position: absolute;
+  content: "";
+  background-image: url(../../Assets/Icons/white-star.svg);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  bottom: 4%;
+  left: 90%;
+}
+.userdashboard-landing-page-container .userdashboard-wallet-summary-section .wallet-content-display .wallet-content-display-total-earning .wallet-title {
+  background: linear-gradient(144.12deg, #042538 11.61%, #1DA1F2 100%);
+  padding: 0.2rem 1rem;
+  border: none;
+  border-radius: 100px;
+}
+
+.challengeSystem-main-container {
+  color: white;
+}
+.challengeSystem-main-container .challengeSystem-intro-banner {
+  width: 50%;
+  margin-bottom: 2%;
+}
+.challengeSystem-main-container .challengeSystem-intro-banner .intro-banner-sub-text {
+  color: #1DA1F2;
+  font-size: 14px;
+}
+.challengeSystem-main-container .challengeSystem-option-links-wrapper {
+  width: 50%;
+  border-bottom: 1px solid #4e5d8b;
+}
+.challengeSystem-main-container .challengeSystem-option-links-wrapper .challengeSystem-option-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.challengeSystem-main-container .challengeSystem-option-links-wrapper .challengeSystem-option-links li {
+  list-style-type: none;
+  position: relative;
+  cursor: pointer;
+}
+.challengeSystem-main-container .challengeSystem-option-links-wrapper .challengeSystem-option-links li:hover::after {
+  position: absolute;
+  content: "";
+  padding: 8px;
+  bottom: -1.1rem;
+  left: 8%;
+  width: 70%;
+  border-bottom: 3px solid white;
+}
+.challengeSystem-main-container .challengeSystem-option-links-wrapper .challengeSystem-option-links li a {
+  color: white;
+}
+.challengeSystem-main-container .challengeSystem-option-links-wrapper .challengeSystem-option-links li a:active {
+  color: red;
+}
+
+.challenge-category .challenge-category-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+}
+.challenge-category .challenge-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem 1rem;
+  margin-top: 2%;
+  margin-bottom: 4%;
+}
+.challenge-category .challenge-cards .challenge-card {
+  width: 200px;
+  height: 180px;
+}
+.challenge-category .challenge-cards .challenge-card img {
   width: 100%;
   height: 100%;
 }/*# sourceMappingURL=Dashboards.css.map */

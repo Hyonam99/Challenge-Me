@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Button'
 import { IoIosNotificationsOutline } from "react-icons/io";
+import { Popover, Whisper, ButtonToolbar } from 'rsuite';
 import profile from '../../Assets/Images/bg-male.png'
 
 const Navbar = () => {

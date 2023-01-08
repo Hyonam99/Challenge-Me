@@ -5,7 +5,7 @@ $tertiary-color: #151C31;
 $primary-text-color: #213f7d;
 $orange-color: orange;
 $alert-color: red;
-$success-color: green;
+$success-color: #00BE13;
 
 .main-dashboard{
   display:grid;
@@ -15,10 +15,10 @@ $success-color: green;
 .dasboard-content-display{
   padding:1rem 2rem;
   background-color: $tertiary-color;
+  min-height: 100vh;
 }
 
 //? USERDASHBOARD STYLING SECTION
-
 
 .userdashboard-landing-page-container{
   color: white;
@@ -33,6 +33,7 @@ $success-color: green;
     grid-template-columns: 1fr 1fr;
     gap:0.8rem;
     align-items: center;
+    margin-bottom: 2%;
 
     .resume-journey-image-holder{
       // height:180px;
@@ -44,7 +45,164 @@ $success-color: green;
         height:100%;
       }
     }
+
+    .resume-journey-contents{
+      .status{
+        color:$success-color;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .userdashboard-wallet-summary-section{
+    position: relative;
+    background-color: $secondary-color;
+    padding:0.4rem;
+    border:none;
+    border-radius: 6px;
+    height:350px;
+
+    &::after {
+      position: absolute;
+      content: '';
+      padding: 2rem;
+      height:50px;
+      background:linear-gradient(178.18deg, #1DA1F2 -13.56%, #281AC8 158.3%);
+      width:93%;
+      bottom: 1px;
+      overflow: hidden;
+      border-radius: 50%/120px 6px 0 0;
+      opacity: 0.14;
+
+    }
+
+    &::before{
+      position: absolute;
+      content: '';
+      background-image: url(../../Assets/Icons/star.svg);
+      background-size: 24px 24px;
+      background-repeat: no-repeat;
+      padding:1rem;
+      bottom:60%;
+      left:4%;
+    }
+
+    .wallet-options{
+      display:flex;
+      justify-content: space-between;
+      position: relative;
+      padding:1rem 2rem;
+
+      &::before{
+        position: absolute;
+        content: '';
+        background-image: url(../../Assets/Icons/white-star.svg);
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
+        padding:1rem;
+        top:36%;
+        left:60%;
+      }
+    }
+
+    .wallet-content-display{
+      position:relative;
+      padding:1rem 4rem;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      z-index:10;
+
+      &::after{
+        position: absolute;
+        content: '';
+        background-image: url(../../Assets/Icons/white-star.svg);
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
+        padding:1rem;
+        bottom:4%;
+        left:90%;
+      }
+
+      .wallet-content-display-total-earning{
+        
+        .wallet-title{
+          background: linear-gradient(144.12deg, #042538 11.61%, #1DA1F2 100%);
+          padding: 0.2rem 1rem;
+          border:none;
+          border-radius: 100px;
+        }
+       
+      }
+    }
   }
 }
 
 
+//? CHALLENGES DASHBOARD STYLING SECTION
+
+.challengeSystem-main-container{
+  color:white;
+
+  .challengeSystem-intro-banner{
+    width: 50%;
+    margin-bottom: 2%;
+    .intro-banner-sub-text{color:$primary-color; font-size: 14px;}
+  }
+
+  .challengeSystem-option-links-wrapper{
+    width: 50%;
+    border-bottom: 1px solid #4e5d8b;
+    .challengeSystem-option-links{
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      li{
+        list-style-type: none;
+        position:relative;
+        cursor: pointer;
+
+        &:hover::after{
+          position: absolute;
+          content: '';
+          padding:8px;
+          bottom: -1.1rem;
+          left:8%;
+          width:70%;
+          border-bottom: 3px solid white;
+        }
+        a {
+          color:white;
+          &:active {
+            color:red;
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+.challenge-category{
+.challenge-category-button-wrapper {
+  display:flex;
+  justify-content: center;
+  margin-top: 4%;
+}
+.challenge-cards{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:4rem 1rem;
+  margin-top: 2%;
+  margin-bottom: 4%;
+
+  .challenge-card{
+    width:200px;
+    height:180px;
+
+    img{
+      width:100%;
+      height:100%;
+    }
+  }
+}
+}

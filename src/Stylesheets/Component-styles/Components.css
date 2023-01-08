@@ -23,7 +23,7 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  width: 200px;
+  width: 160px;
   height: 32px;
 }
 
@@ -57,7 +57,20 @@
   list-style-type: none;
   padding: 0.4rem;
 }
+.main-sidebar-container .sidebar-contents .sidebar-navigation li button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
 .main-sidebar-container .sidebar-contents .sidebar-navigation li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
   color: white;
 }
 .main-sidebar-container .sidebar-contents .sidebar-navigation li a:active {
