@@ -10,18 +10,18 @@ const ChallengeSystem = () => {
   const [viewTvshows, setViewTvshows] = useState(false);
 
   const displaySport = () => {
-    setViewSports(true),
-    setViewEntertainment(false),
+    setViewSports(true)
+    setViewEntertainment(false)
     setViewTvshows(false)
   }
   const displayEntertainment = () => {
-    setViewSports(false),
-    setViewEntertainment(true),
+    setViewSports(false)
+    setViewEntertainment(true)
     setViewTvshows(false)
   }
   const displayTvshows = () => {
-    setViewSports(false),
-    setViewEntertainment(false),
+    setViewSports(false)
+    setViewEntertainment(false)
     setViewTvshows(true)
   }
 

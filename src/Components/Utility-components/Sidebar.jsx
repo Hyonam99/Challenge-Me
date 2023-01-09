@@ -25,51 +25,51 @@ const Sidebar = () => {
   } = useContext(DashboardContext);
 
   const Dashboard = () => {
-    setViewUserDashboard(true),
-    setViewChallenges(false),
-    setViewFundAccount(false),
-    setViewTransactions(false),
-    setViewWithdrawal(false),
+    setViewUserDashboard(true)
+    setViewChallenges(false)
+    setViewFundAccount(false)
+    setViewTransactions(false)
+    setViewWithdrawal(false)
     setViewProfile(false)
   }
   const Challenge = () => {
-    setViewUserDashboard(false),
-    setViewChallenges(true),
-    setViewFundAccount(false),
-    setViewTransactions(false),
-    setViewWithdrawal(false),
+    setViewUserDashboard(false)
+    setViewChallenges(true)
+    setViewFundAccount(false)
+    setViewTransactions(false)
+    setViewWithdrawal(false)
     setViewProfile(false)
   }
   const FundAccount = () => {
-    setViewUserDashboard(false),
-    setViewChallenges(false),
-    setViewFundAccount(true),
-    setViewTransactions(false),
-    setViewWithdrawal(false),
+    setViewUserDashboard(false)
+    setViewChallenges(false)
+    setViewFundAccount(true)
+    setViewTransactions(false)
+    setViewWithdrawal(false)
     setViewProfile(false)
   }
   const Transactions = () => {
-    setViewUserDashboard(false),
-    setViewChallenges(false),
-    setViewFundAccount(false),
-    setViewTransactions(true),
-    setViewWithdrawal(false),
+    setViewUserDashboard(false)
+    setViewChallenges(false)
+    setViewFundAccount(false)
+    setViewTransactions(true)
+    setViewWithdrawal(false)
     setViewProfile(false)
   }
   const Withdrawal = () => {
-    setViewUserDashboard(false),
-    setViewChallenges(false),
-    setViewFundAccount(false),
-    setViewTransactions(false),
-    setViewWithdrawal(true),
+    setViewUserDashboard(false)
+    setViewChallenges(false)
+    setViewFundAccount(false)
+    setViewTransactions(false)
+    setViewWithdrawal(true)
     setViewProfile(false)
   }
   const Profile = () => {
-    setViewUserDashboard(false),
-    setViewChallenges(false),
-    setViewFundAccount(false),
-    setViewTransactions(false),
-    setViewWithdrawal(false),
+    setViewUserDashboard(false)
+    setViewChallenges(false)
+    setViewFundAccount(false)
+    setViewTransactions(false)
+    setViewWithdrawal(false)
     setViewProfile(true)
   }
 
