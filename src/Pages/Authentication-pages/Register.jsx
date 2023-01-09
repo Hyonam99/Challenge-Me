@@ -2,7 +2,7 @@ import React from 'react'
 import '../../Stylesheets/Auth-styles/Auth.css'
 
 import Logo from '../../Components/Utility-components/Logo'
-import RegisterFormComponent from './RegisterFormComponent'
+import RegisterFormComponent from '../../Components/Pages-components/RegisterFormComponent'
 
 const Register = () => {
   return (
