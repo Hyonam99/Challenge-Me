@@ -39,7 +39,7 @@ const Dashboard = () => {
           <Sidebar />
           <section className="dashboard-contents-container">
             <Navbar />
-            <div className="dasboard-content-display">
+            <div className={viewChallenges ? 'challenges-dashboard-content' : "dasboard-content-display"}>
               {viewUserDashboard && <DashboardComponent />}
               {viewChallenges && <ChallengeSystem />}
               {viewFundAccount && <FundAccount />}

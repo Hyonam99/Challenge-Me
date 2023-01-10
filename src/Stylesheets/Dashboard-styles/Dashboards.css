@@ -9,6 +9,11 @@
   min-height: 100vh;
 }
 
+.challenges-dashboard-content {
+  background-color: #151C31;
+  min-height: 100vh;
+}
+
 .userdashboard-landing-page-container {
   color: white;
 }
@@ -108,6 +113,7 @@
 
 .challengeSystem-main-container {
   color: white;
+  padding: 1rem 2rem;
 }
 .challengeSystem-main-container .challengeSystem-intro-banner {
   width: 50%;
@@ -163,7 +169,58 @@
   width: 200px;
   height: 180px;
 }
+.challenge-category .challenge-cards .challenge-card a p {
+  color: white;
+}
 .challenge-category .challenge-cards .challenge-card img {
+  width: 100%;
+  height: 100%;
+}
+
+.movie-challenge-main-section {
+  color: white;
+}
+.movie-challenge-main-section .movie-challenge-intro-banner {
+  background: linear-gradient(198.93deg, hsla(193deg, 60%, 30%, 0.9) 34.5%, hsla(212deg, 43%, 25%, 0.54) 55.06%, #151C31 76.92%);
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 2px;
+  height: 200px;
+  width: 100%;
+  color: white;
+  border: 0;
+  outline: 0;
+}
+.movie-challenge-main-section .movie-challenge-intro-banner .movie-challenge-intro-title {
+  background: linear-gradient(198.93deg, hsla(193deg, 60%, 30%, 0.9) 24.5%, hsla(212deg, 43%, 25%, 0.54) 45.06%, #151C31 76.92%);
+  padding: 1rem 2rem;
+  border: 0;
+  outline: 0;
+}
+.movie-challenge-main-section .movie-challenge-intro-banner .movie-challenge-intro-image-holder {
+  height: 200px;
+}
+.movie-challenge-main-section .movie-challenge-intro-banner .movie-challenge-intro-image-holder img {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  -o-border-image: 0;
+     border-image: 0;
+}
+.movie-challenge-main-section .movie-challenge {
+  padding: 1rem 2rem;
+  margin-top: 2%;
+}
+.movie-challenge-main-section .movie-challenge .movie-challenge-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem 0.2rem;
+}
+.movie-challenge-main-section .movie-challenge .movie-challenge-card-wrapper .movie-challenge-card .movie-challenge-card-image-holder {
+  width: 200px;
+  height: 260px;
+}
+.movie-challenge-main-section .movie-challenge .movie-challenge-card-wrapper .movie-challenge-card .movie-challenge-card-image-holder img {
   width: 100%;
   height: 100%;
 }/*# sourceMappingURL=Dashboards.css.map */

@@ -10,10 +10,16 @@ $success-color: #00BE13;
 .main-dashboard{
   display:grid;
   grid-template-columns: 18% 1fr;
+  // background-color: $tertiary-color;
 }
 
 .dasboard-content-display{
   padding:1rem 2rem;
+  background-color: $tertiary-color;
+  min-height: 100vh;
+}
+
+.challenges-dashboard-content{
   background-color: $tertiary-color;
   min-height: 100vh;
 }
@@ -142,6 +148,7 @@ $success-color: #00BE13;
 
 .challengeSystem-main-container{
   color:white;
+  padding:1rem 2rem;
 
   .challengeSystem-intro-banner{
     width: 50%;
@@ -198,11 +205,77 @@ $success-color: #00BE13;
   .challenge-card{
     width:200px;
     height:180px;
+    // color:white;
 
+    a{
+      p{
+        color:white;
+      }
+     }
+    
     img{
       width:100%;
       height:100%;
     }
   }
 }
+}
+
+
+//? MOVIE CHALLENGES STYLING SECTION 
+
+.movie-challenge-main-section{
+  color:white;
+  .movie-challenge-intro-banner{
+    background: linear-gradient(198.93deg, hsla(193, 60%, 30%, 0.9) 34.5%, hsla(212, 43%, 25%, 0.54) 55.06%, #151C31 76.92%);
+    display:grid;
+    grid-template-columns: 60% 40%;
+    gap:2px;
+    height:200px;
+    width: 100%;
+    color:white;
+    border:0;
+    outline:0;
+    // outline:1px solid red;
+
+    .movie-challenge-intro-title{
+      background: linear-gradient(198.93deg, hsla(193, 60%, 30%, 0.9) 24.5%, hsla(212, 43%, 25%, 0.54) 45.06%, #151C31 76.92%);
+      padding:1rem 2rem;
+      border: 0;
+      outline: 0;
+    }
+
+    .movie-challenge-intro-image-holder{
+      
+      height:200px;
+      img{
+        height:100%;
+        width: 100%;
+        border: 0;
+        border-image: 0;
+      }
+    }
+  }
+
+  .movie-challenge{
+    padding:1rem 2rem;
+    margin-top: 2%;
+
+    .movie-challenge-card-wrapper{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:2rem 0.2rem;
+
+      .movie-challenge-card{
+        .movie-challenge-card-image-holder{
+          width:200px;
+          height:260px;
+          img{
+            width:100%;
+            height:100%;
+          }
+        }
+      }
+    }
+  }
 }
