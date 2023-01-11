@@ -94,6 +94,10 @@
   border: 0 !important;
 }
 
+.registration-form-section {
+  overflow-y: scroll;
+}
+
 .register-image-section {
   background: linear-gradient(0deg, hsla(240deg, 54%, 10%, 0.5), hsla(240deg, 54%, 10%, 0.5)), url(../../Assets/Images/bg-female.png);
   background-size: contain;
@@ -101,10 +105,6 @@
   padding: 0;
   height: 100vh;
   opacity: 0.9;
-}
-
-.registration-form-section {
-  overflow-y: scroll;
 }
 
 .register-form-section {
@@ -140,4 +140,25 @@
 }
 .register-form-section form .form-input-holder small {
   color: red;
+}
+
+@media (max-width: 764px) {
+  .login-image-section,
+.register-image-section {
+    display: none;
+  }
+  .auth-form-container {
+    display: grid;
+    grid-template-columns: auto;
+    height: 100vh;
+  }
+  .register-form-section {
+    overflow-y: hidden;
+  }
+}
+@media (max-width: 464px) {
+  .register-form-section,
+.login-form-section {
+    width: 90%;
+  }
 }/*# sourceMappingURL=Auth.css.map */
