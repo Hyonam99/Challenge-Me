@@ -1,6 +1,6 @@
 let CACHE_NAME = 'my-site-cache-v1';
 
-const urlsToCache = [ '/', '/index.html', ];
+const urlsToCache = [ '/', '/index.html', '/register'];
 
 self.addEventListener('install', function(event) {
 // Perform install steps

@@ -1,9 +1,8 @@
-import React, {useState, useContext} from 'react'
+import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Login from './Pages/Authentication-pages/Login'
 import Register from './Pages/Authentication-pages/Register'
 import Dashboards from './Pages/Dashboards/Dashboards'
-import { DashboardContext } from './Contexts/DashboardContext'
 
 function App() {
   return (
